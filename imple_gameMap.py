@@ -1,6 +1,6 @@
 n, m = map(int, input().split())
 x, y, d = map(int, input().split())
-map = [[list(map(int, input().split()))] for _ in range(n)] # 맵
+map = [list(map(int, input().split())) for _ in range(n)] # 맵
 visited = [[0] * m for _ in range(n)] # 방문 여부를 나타내는 2차원 리스트
 visited[x][y] = 1 # 첫 시작 위치를 방문했다고 표시
 
