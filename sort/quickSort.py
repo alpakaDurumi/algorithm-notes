@@ -9,6 +9,7 @@ def quick_sort(array, start, end):
 	while left <= right: # 엇갈릴 때까지 반복
 		while left <= end and array[left] <= array[pivot]:
 			left += 1
+			print(left)
 		while right > start and array[right] >= array[pivot]:
 			right -= 1
 		if left > right: # 엇갈린 경우 작은 데이터와 피벗을 swap
@@ -20,3 +21,8 @@ def quick_sort(array, start, end):
 
 quick_sort(array, 0, len(array) - 1)
 print(array)
+
+# '=' in ln 10 (that between left and right)is need to change left and right when right == end
+# For example in circumstance like 0 1 2 (4 3) 5 ...
+# Unless '=' is exist, left and right are both 4, sorting is not occurred.
+# And therefore in ln 4, infinite loop is occurred.
